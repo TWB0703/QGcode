@@ -1,5 +1,5 @@
 class Shape:
-    __shape_count = 0  # 类变量，记录所有图形创建数量
+    __shape_count = 0  
 
     def __init__(self):
         self.__area = 0
@@ -23,7 +23,7 @@ class Shape:
 class Circle(Shape):
     def __init__(self, radius):
         super().__init__()
-        self.radius = radius  # 实例变量存储尺寸
+        self.radius = radius 
 
     def __calc_area(self):
         """重写面积计算逻辑（多态）"""
@@ -56,4 +56,5 @@ if __name__ == "__main__":
     try:
         print(circle.__area)  # 会报错
     except AttributeError as e:
+
         print(f"封装验证: 无法直接访问私有属性 - {e}")
